@@ -1,12 +1,11 @@
 from flask import Blueprint, g, render_template, request, jsonify
 import os
 from passageidentity import Passage, PassageError
-from flask import Flask
+
 
 main = Blueprint('main', __name__)
 auth = Blueprint('auth', __name__)
 
-app = Flask(__name__)
 
 # Passage setup
 PASSAGE_API_KEY = os.environ.get("PASSAGE_API_KEY")
